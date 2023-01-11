@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 from pathlib import Path
+import django_heroku
 import os
 import environ
 
@@ -170,3 +171,7 @@ DATABASES = {
 }
 
 #DATABASE_URL = os.getenv("DATABASE_URL")
+
+
+
+django_heroku.settings(locals())
