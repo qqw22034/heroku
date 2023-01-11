@@ -32,8 +32,8 @@ SECRET_KEY = env("DJANGO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DJANGO_DEBUG")
 
-ALLOWED_HOSTS = ['first-production.up.railway.app', 'localhost', '*']
-CSRF_TRUSTED_ORIGINS = ['https://first-production.up.railway.app']
+ALLOWED_HOSTS = [env('DJANGO_ALLOWED_HOSTS')]
+CSRF_TRUSTED_ORIGINS = [env('DJANGO_ALLOWED_HOSTS')]
 
 # Application definition
 
@@ -86,14 +86,14 @@ WSGI_APPLICATION = 'stock.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 
-'''
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-'''
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -149,7 +149,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #ADmin styling adjusment
 
 #ADMIN_MEDIA_PREFIX = '/static/admin/'
-
+'''
 DATABASES = {
 
     'default': {
@@ -169,7 +169,7 @@ DATABASES = {
     }
 
 }
-
+'''
 #DATABASE_URL = os.getenv("DATABASE_URL")
 
 
